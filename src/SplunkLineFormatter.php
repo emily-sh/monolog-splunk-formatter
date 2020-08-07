@@ -62,7 +62,7 @@ class SplunkLineFormatter extends LineFormatter
         return $this->convertToString($data);
     }
 
-    protected function convertToString($data)
+    protected function convertToString($data): string
     {
         if (null === $data || is_bool($data)) {
             return var_export($data, true);
